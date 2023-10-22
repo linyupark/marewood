@@ -32,6 +32,10 @@ func BuildDependCmd(tools string) (name string, arg string) {
 		return "yarn", ""
 	case "cnpm":
 		return "cnpm", "install"
+	case "pnpm":
+		return "pnpm", "install"
+	case "bun":
+		return "bun", "add"
 	default:
 		return "npm", "install"
 	}

@@ -21,7 +21,7 @@ func init() {
 		panic(err)
 	}
 
-	userCfg.DependTools = []string{"npm", "yarn"}
+	userCfg.DependTools = []string{"npm", "yarn", "pnpm", "bun"}
 	userCfg.LogMode = false
 
 	userCfg.GinMode = os.Getenv("MW_GIN_MODE")

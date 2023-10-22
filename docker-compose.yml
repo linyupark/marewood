@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  marewood:
+    build: .
+    image: marewood:0.4.0
+    container_name: marewood
+    restart: unless-stopped
+    ports:
+      - "8088:8088"
+    volumes:
+      - "./resources:/app/resources"
+    working_dir: "/app"
