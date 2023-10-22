@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-//随机字符串
+// 随机字符串
 func RandSeq(n int) string {
 	const letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 	b := make([]byte, n)
@@ -35,7 +35,7 @@ func BuildDependCmd(tools string) (name string, arg string) {
 	case "pnpm":
 		return "pnpm", "install"
 	case "bun":
-		return "bun", "add"
+		return "bun", "install"
 	default:
 		return "npm", "install"
 	}
@@ -80,7 +80,7 @@ func InStrArr(str string, arr []string) bool {
 	return false
 }
 
-func ComputeTotalPage(total, pageSize int, ) int {
+func ComputeTotalPage(total, pageSize int) int {
 	totalPage := total / pageSize
 	if total%pageSize != 0 {
 		totalPage++
